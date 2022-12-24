@@ -2,7 +2,7 @@
   "name": "project_1",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://skiffong.github.is/react-movie-finder",
+  "homepage":"https://skiffong.github.io/react-movie-finder",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
