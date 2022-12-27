@@ -2,20 +2,22 @@ import React, { useEffect, useState } from "react";
 
 export const Movie = (props) => {
   const [id, setId] = useState("");
+  const [click, setClick] = useState(false);
 
   const { Title, Year, imdbID, Type, Poster, showInfo, setActive } = props;
 
   const showPopout = () => {
+    setClick(true);
     setId(imdbID);
-    const showpopup = () => {
-      setActive();
-    };
-    showpopup();
+    setActive();
   };
 
   useEffect(() => {
-    showInfo(id);
-  }, [id]);
+    if (click) {
+      showInfo(id);
+      setClick(false);
+    }
+  }, [click]);
 
   return (
     <div className="card blue-grey darken-1">

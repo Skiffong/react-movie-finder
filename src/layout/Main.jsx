@@ -37,6 +37,7 @@ const Main = () => {
   };
 
   const showInfo = (id) => {
+    setMovie({});
     fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}&plot=full`)
       .then((res) => res.json())
       .then((result) => {
@@ -66,7 +67,7 @@ const Main = () => {
             setActive={popoutSetActive}
           />
         ) : (
-          ""
+          <Preloader />
         )}
         <Search searchMovie={searchMovie} />
         {loaded ? (
